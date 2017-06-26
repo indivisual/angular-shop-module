@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+	filter: Array<Object>;
+  	title = 'app';
+
+  	constructor() {
+  		this.filter = [];
+  	}
+
+  /**
+   * Update messages array from event
+   * @param ev
+   */
+  handleMessage(ev) {
+    this.filter = ev;
+  }
 }

@@ -1,8 +1,12 @@
 <masonry class="shop-list" [options]="{ fitWidth:false }">
-	<masonry-brick class="shop__item" *ngFor="let shop of shopList">
+	<masonry-brick *ngFor="let shop of shopList" 
+	class="shop__item {{shop.category | lowercase}}" 
+	[ngClass]="((filterArray.filter !== 'all') && (filterArray.filter !== shop.category.toLowerCase())) ? 'hide' : 'show'" 
+	(click)="goToDetailComponent(shop._id)">
+
 		<div class="shop__image" [ngStyle]="{ 'background': shop.photos[0] !== undefined ? 'url('+shop.photos[0].thumbnails.medium+') no-repeat center center/cover' : 'url(https://www.cmk.mx/index.php?/files/large/1174ea1acd7e0e3) no-repeat center center/contain' }">
 			<p class="shop-name">{{shop.name}}</p>
-			<p class="shop-category {{shop.category}}">{{shop.category}}</p>
+			<p class="shop-category {{shop.category | lowercase}}">{{shop.category}}</p>
 		</div>
 
 		

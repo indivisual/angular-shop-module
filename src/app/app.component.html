@@ -1,2 +1,4 @@
-<app-shop-grid></app-shop-grid>
+<app-menu (filterSended)="handleMessage($event)"></app-menu>
+<app-shop-grid [filterArray]="filter"></app-shop-grid>
+<router-outlet></router-outlet>
 

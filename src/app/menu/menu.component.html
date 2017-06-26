@@ -1,0 +1,5 @@
+<ul class="filter">
+	<li *ngFor="let shop of shopList | filterUnique">
+		<a href="#" (click)="filterBy(shop.category)">{{shop.category}}</a>
+	</li>
+</ul>

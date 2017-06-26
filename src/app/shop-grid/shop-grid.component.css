@@ -6,6 +6,7 @@
 	font-size: 1rem;
 	text-align: center;
 	font-family: sans-serif;
+
 }
 .shop__item{
 	display: inline-block;
@@ -109,12 +110,22 @@
 	margin:0;
 }
 
-.SHOPPING {
+.shop-category.shopping {
 	background:yellowgreen;
 }
 
-.BEAUTY {
+.shop-category.beauty {
 	background: burlywood;
+}
+
+.show {
+	opacity:1;
+	pointer-events: all;
+}
+
+.hide {
+	opacity:0.2;
+	pointer-events: none;
 }
  
 @media only screen and (max-width: 500px) { 
@@ -124,68 +135,3 @@
 		height: 235px;
 	}
 }
-@media only screen and (max-width: $screen-xs) { 
-	
-}
-
-	
-
-		.shop__image-hover{
-			display: none;
-		}
-	
-
-	
-
-		p{
-			color:$primary-color;
-		}
-
-		.restaurant-name{
-			@include text-mrs-eaves-roman(32);
-			text-transform: uppercase;
-			padding-bottom: rem(10);
-		}
-		.restaurant-price{
-			@include text-futura-light(22);
-			text-transform: uppercase;
-			padding-bottom: rem(24);
-		}
-		.restaurant-description{
-			@include text-mrs-eaves-italic(22);
-			padding-bottom: rem(10);
-		}
-	
-
-	&.not-available{
-		.shop__image img{
-			opacity: 0.3;
-			-moz-opacity: 0.3;
-			filter: alpha(opacity=30); /* IE */
-		}
-
-		.btn{
-			display: none;
-		}
-
-		.shop__image-hover{
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%,-50%);
-			-moz-transform: translate(-50%,-50%);
-			-ms-transform: translate(-50%,-50%);
-			-o-transform: translate(-50%,-50%);
-			z-index: 1;
-
-			span{
-				@include text-futura-light(18);
-				color:$secondary-color;
-				text-transform: uppercase;
-				display: block;
-				line-height: 1.4;
-			}
-		}
-	}
-
