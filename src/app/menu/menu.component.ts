@@ -1,3 +1,5 @@
+/* Componente que crea el menú de filtros. Emite un evnto al clicarse sobre un filtro */
+
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ShopService } from '../shop.service';
 import { FilterPipe } from './filterPipe.pipe';

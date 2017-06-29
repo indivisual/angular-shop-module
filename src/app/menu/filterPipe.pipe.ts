@@ -1,3 +1,5 @@
+/* Pipe que filtra las categorías unicas */
+
 import { Pipe, PipeTransform } from '@angular/core';
 import * as _ from 'lodash'; 
 

@@ -1,3 +1,5 @@
+/* Muestra el grid de restaurantes. */
+
 import { Component, OnInit, Input } from '@angular/core';
 import { ShopService } from '../shop.service';
 import { MasonryModule } from 'angular2-masonry';

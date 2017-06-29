@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 	filter: Array<Object>;
-  	title = 'app';
+  	title = 'Klikin Test';
 
   	constructor() {
   		this.filter = [];

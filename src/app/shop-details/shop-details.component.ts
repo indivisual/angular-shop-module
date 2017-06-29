@@ -1,3 +1,6 @@
+/* Muestra el detalle de un restaurante. Usa la librería masonry para ordenar los
+   resultados. */
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ShopService } from '../shop.service';
@@ -11,11 +14,10 @@ import { Location } from '@angular/common';
 })
 export class ShopDetailsComponent implements OnInit, OnDestroy {
 
-	id: string;
+	  id: string;
   	sub: any;
   	shopItem: any;
   	
-  
   constructor(private route: ActivatedRoute, private shopService: ShopService, private location: Location) {
   	this.shopItem = [];
   }
@@ -25,13 +27,15 @@ export class ShopDetailsComponent implements OnInit, OnDestroy {
        this.id = params['id'];
 
        this.shopService.getShops(this.id).subscribe((res) => {
-		  if(res.length){
-		    this.shopItem = res.filter((item) => {
-		      return item._id === this.id;
-		    });
-		  }
-		});
+		    if(res.length){
+          this.shopItem = res.filter((item) => {
+            return item._id === this.id;
+          });
+		    }
+		  });
     });
+
+    window.scroll(0,0);
   }
 
   ngOnDestroy() {

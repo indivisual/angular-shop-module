@@ -16,6 +16,9 @@ import * as _ from 'lodash';
 import { routes } from "./app.routes";
 import { RouterModule, ActivatedRoute } from "@angular/router";
 
+import { AgmCoreModule } from '@agm/core';
+import { GMapsService } from "./gmaps.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +31,12 @@ import { RouterModule, ActivatedRoute } from "@angular/router";
     BrowserModule,
     HttpModule,
     MasonryModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({apiKey: 'AIzaSyBTHsJPaZ-MYlCvrhwPwLFtDzOxFJEdaRc'})
   ],
   providers: [
-  	ShopService
+  	ShopService, 
+    GMapsService
   ],
   bootstrap: [AppComponent]
 })

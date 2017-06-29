@@ -1,0 +1,47 @@
+.shop-details {
+	position: fixed;
+    top: 0;
+    background: burlywood;
+    width: 84%;
+    height: 80%;
+    margin: 2%;
+    padding: 5%;
+    font-size: 16px;
+    font-family: sans-serif;
+    overflow: hidden;
+    border: 0.6rem solid white;
+    border-radius: 40px;
+    opacity: .95;
+    
+}
+
+.title {
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+.shop-details__contact p {
+    margin: 0 0 2rem 0;
+}
+
+.close {
+	position: absolute;
+	right: 2rem;
+	text-align: center;
+	top: 1rem;
+}
+
+.close a {
+	text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.close span {
+	display: block;
+	font-size: 1rem;
+}
+
+agm-map {
+  height: 55%;
+}
