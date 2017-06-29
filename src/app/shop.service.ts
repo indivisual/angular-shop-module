@@ -10,7 +10,7 @@ export class ShopService {
   constructor( private http:Http) { }
 
 	getShops(id: any) {
-		return this.http.get('../assets/commerces.json')
+		return this.http.get('./assets/commerces.json')
 			.map(this.extractData);
 	}
 
